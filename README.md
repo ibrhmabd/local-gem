@@ -9,7 +9,7 @@ Local Gem is a web app that delivers a few curated “hidden gem” recommendati
 
 ## Run Locally
 ``` bash
-git clone git@github.com:username/local-gem.git
+git clone git@github.com:ibrhmabd/local-gem.git
 cd local-gem
 python3 -m http.server 8000
 ```
