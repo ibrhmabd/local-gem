@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Local Gem</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" type="image/png" href="assets/gem.png">
+</head>
+<body>
+  <!-- Intro / Auth Screen -->
+  <section id="intro" class="view active">
+    <div class="intro-card">
+      <img src="assets/logo.png" alt="Local Gem logo" class="logo"/>
+      <p>the app to your next adventure</p>
+      <div class="auth">
+        <input type="email" placeholder="Email" aria-label="email">
+        <input type="password" placeholder="Password" aria-label="password">
+        <div class="auth-actions">
+          <button id="loginBtn" type="button" class="btn primary">Log in</button>
+          <button id="signupBtn" type="button" class="btn outline">Sign up</button>
+        </div>
+      </div>
+      <small class="note">Demo only: buttons continue to the app.</small>
+    </div>
+  </section>
+
+  <!-- Dashboard -->
+  <section id="dashboard" class="view">
+    <header class="appbar">
+      <div class="brand">
+        <img src="assets/dashboard-logo.png" alt="" class="small-gem"/>
+        <span>Local Gem</span>
+      </div>
+      <nav>
+        <button id="logoutBtn" class="btn text">Log out</button>
+      </nav>
+    </header>
+
+    <main class="content">
+      <div class="location-input">
+        <label for="city">Enter your city</label>
+        <div class="row">
+          <input id="city" type="text" placeholder="e.g., Austin" />
+          <button id="goBtn" class="btn primary">Find gems</button>
+        </div>
+        <small class="note">Demo uses placeholder cards only.</small>
+      </div>
+
+      <div id="cards" class="card-grid" aria-live="polite"></div>
+    </main>
+  </section>
+
+  <!-- Vote Modal -->
+  <div id="voteModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="voteTitle" hidden>
+    <div class="modal-content">
+      <h3 id="voteTitle">Give a rating:</h3>
+      <div class="vote-actions">
+        <button class="btn thumbs" data-vote="up" aria-label="Thumbs up">👍</button>
+        <button class="btn thumbs" data-vote="down" aria-label="Thumbs down">👎</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js" defer></script>
+<noscript style='color:white;display:block;text-align:center;margin:10px;'>Enable JavaScript to use this demo.</noscript>
+</body>
+</html>
